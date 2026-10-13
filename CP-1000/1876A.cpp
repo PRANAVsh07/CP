@@ -13,7 +13,7 @@ int main(){
 
          vector<int>a(n);
          vector<int>b(n);
-         vector<pair<int ,int >> v;
+         vector<pair<long ,long >> v;
 
         for(int i  =0 ;i<n ;i++){
             cin>>a[i];
@@ -28,7 +28,7 @@ int main(){
         }
         sort(v.begin()  , v.end());
         int  informed=1;
-        int ans=k;
+        long long ans=k;
 
         for (auto it : v) {
            int  cost  = it.first;
@@ -48,6 +48,9 @@ int main(){
 
             
         }
+        ans+=1LL*(n-informed)*k;
+        cout<<ans<<endl;
+
 
     }
 }
